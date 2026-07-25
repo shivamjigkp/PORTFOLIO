@@ -1,0 +1,57 @@
+/* ==========================================================================
+   CURSOR — custom dot + trailing ring, desktop (fine pointer) only.
+   Activated only after JS confirms a fine pointer is present, so touch
+   devices are completely unaffected and never get a hidden native cursor.
+   ========================================================================== */
+
+html.has-custom-cursor,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor .btn{
+  cursor:none;
+}
+
+.cursor-dot,
+.cursor-ring{
+  position:fixed;top:0;left:0;z-index:9998;
+  border-radius:50%;
+  pointer-events:none;
+  will-change:transform;
+  transform:translate(-50%,-50%);
+}
+
+.cursor-dot{
+  width:6px;height:6px;
+  background:var(--accent);
+  transition:opacity .2s ease;
+}
+
+.cursor-ring{
+  width:34px;height:34px;
+  border:1px solid var(--border-strong);
+  transition:width .22s cubic-bezier(.16,1,.3,1), height .22s cubic-bezier(.16,1,.3,1),
+             border-color .22s ease, background .22s ease, opacity .2s ease;
+}
+
+/* Hover state over interactive elements — ring expands to "frame" the target.
+   Outline only, no fill — a solid fill sat on top of text and made nav
+   links unreadable in light mode. */
+html.has-custom-cursor.cursor-hover .cursor-ring{
+  width:46px;height:46px;
+  border-width:1.5px;
+  border-color:var(--accent);
+  background:transparent;
+}
+html.has-custom-cursor.cursor-hover .cursor-dot{
+  background:var(--accent);
+}
+
+/* Hide entirely when the pointer leaves the viewport */
+html.has-custom-cursor.cursor-idle .cursor-dot,
+html.has-custom-cursor.cursor-idle .cursor-ring{
+  opacity:0;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .cursor-ring{transition:opacity .2s ease;}
+}

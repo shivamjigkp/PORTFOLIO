@@ -1,0 +1,74 @@
+/* ==========================================================================
+   COMMAND PALETTE — Ctrl/Cmd+K quick-navigation & actions.
+   Built and injected by commandPalette.js; hidden by default.
+   ========================================================================== */
+
+/* Nav trigger hint (⌘K pill) */
+.cmdk-trigger{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-2);
+  border:1px solid var(--border-strong);background:var(--surface);
+  padding:7px 10px;border-radius:9px;
+  transition:border-color .18s ease, color .18s ease;
+}
+.cmdk-trigger:hover{border-color:var(--text-2);color:var(--text);}
+.cmdk-trigger kbd{
+  font-family:inherit;font-size:11px;background:var(--bg-soft);
+  border:1px solid var(--border-strong);border-radius:5px;padding:1px 5px;
+}
+@media(max-width:900px){.cmdk-trigger{display:none;}}
+
+/* Overlay + panel */
+.cmdk-overlay{
+  position:fixed;inset:0;z-index:9996;
+  background:rgba(10,10,15,0.5);backdrop-filter:blur(2px);
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:14vh 20px 20px;
+  opacity:0;visibility:hidden;
+  transition:opacity .2s ease, visibility .2s ease;
+}
+.cmdk-overlay.is-open{opacity:1;visibility:visible;}
+
+.cmdk-panel{
+  width:100%;max-width:560px;
+  background:var(--surface);border:1px solid var(--border-strong);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  transform:translateY(-10px) scale(.98);
+  transition:transform .22s cubic-bezier(.16,1,.3,1);
+}
+.cmdk-overlay.is-open .cmdk-panel{transform:translateY(0) scale(1);}
+
+.cmdk-input-row{
+  display:flex;align-items:center;gap:10px;
+  padding:16px 18px;border-bottom:1px solid var(--border);
+}
+.cmdk-input-icon{color:var(--text-3);font-size:15px;}
+.cmdk-input{
+  flex:1;border:none;background:transparent;outline:none;
+  font-family:inherit;font-size:15px;color:var(--text);
+}
+.cmdk-input::placeholder{color:var(--text-3);}
+.cmdk-esc{
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3);
+  border:1px solid var(--border-strong);border-radius:5px;padding:2px 6px;
+}
+
+.cmdk-list{max-height:52vh;overflow-y:auto;padding:8px;}
+.cmdk-group-label{
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:0.07em;
+  padding:10px 12px 6px;
+}
+.cmdk-item{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 12px;border-radius:var(--radius-sm);cursor:pointer;
+  font-size:14px;color:var(--text-body);
+}
+.cmdk-item-icon{font-size:15px;flex:none;width:20px;text-align:center;}
+.cmdk-item-label{flex:1;color:var(--text);font-weight:500;}
+.cmdk-item-hint{font-size:12px;color:var(--text-3);}
+.cmdk-item.is-active{background:var(--accent-soft);}
+.cmdk-item.is-active .cmdk-item-label{color:var(--accent);}
+
+.cmdk-empty{padding:26px 12px;text-align:center;color:var(--text-3);font-size:13.5px;}

@@ -1,0 +1,14 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer{border-top:1px solid var(--border);padding:36px 0;}
+.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-text{font-size:13px;color:var(--text-3);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:13px;color:var(--text-2);}
+.footer-links a:hover{color:var(--text);}
+
+@media(max-width:480px){
+  .footer-row{flex-direction:column;text-align:center;}
+}

@@ -1,0 +1,18 @@
+/* ==========================================================================
+   RESPONSIVE — global, cross-component adjustments
+   Note: breakpoints specific to a single component (e.g. .hero-grid,
+   .proj-grid, .skills-grid) live inside that component's own stylesheet,
+   next to the rules they modify. This file only holds the small-mobile
+   pass that touches multiple components at once.
+   ========================================================================== */
+
+@media(max-width:480px){
+  section{padding:72px 0;}
+  .hero{padding-top:40px;}
+  .hero-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas .btn{width:100%;}
+  .hero-tags{gap:6px;}
+  .stats-grid{grid-template-columns:1fr;row-gap:20px;padding:28px 0;}
+  .stat-item{border-right:none !important;border-bottom:1px solid var(--border);padding-bottom:16px;}
+  .stat-item:last-child{border-bottom:none;padding-bottom:0;}
+}

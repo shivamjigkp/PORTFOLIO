@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFFFFF">
+<title>Shivam Gupta — Software Engineer & Machine Learning Developer</title>
+<meta name="description" content="Shivam Gupta — Software Engineer & Machine Learning Developer. Final year B.Tech ECE student building full-stack applications, ML pipelines, and data-driven products.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<!-- Styles (loaded in cascade order: tokens -> base -> components -> responsive/animations) -->
+<link rel="stylesheet" href="src/styles/variables.css">
+<link rel="stylesheet" href="src/styles/globals.css">
+<link rel="stylesheet" href="src/styles/buttons.css">
+<link rel="stylesheet" href="src/styles/navbar.css">
+<link rel="stylesheet" href="src/styles/hero.css">
+<link rel="stylesheet" href="src/styles/stats.css">
+<link rel="stylesheet" href="src/styles/about.css">
+<link rel="stylesheet" href="src/styles/experience.css">
+<link rel="stylesheet" href="src/styles/projects.css">
+<link rel="stylesheet" href="src/styles/skills.css">
+<link rel="stylesheet" href="src/styles/achievements.css">
+<link rel="stylesheet" href="src/styles/contact.css">
+<link rel="stylesheet" href="src/styles/footer.css">
+<link rel="stylesheet" href="src/styles/toast.css">
+<link rel="stylesheet" href="src/styles/contact-form.css">
+<link rel="stylesheet" href="src/styles/command-palette.css">
+<link rel="stylesheet" href="src/styles/cursor.css">
+<link rel="stylesheet" href="src/styles/loader.css">
+<link rel="stylesheet" href="src/styles/animations.css">
+<link rel="stylesheet" href="src/styles/responsive.css">
+</head>
+<body>
+
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mark">SG</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><span class="brand-mark">SG</span> Shivam Gupta</div>
+      <div class="navlinks" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+      </div>
+      <div class="nav-cta">
+        <button class="cmdk-trigger" id="cmdk-open" type="button" aria-label="Open command palette">⌕ <kbd>Ctrl</kbd>+<kbd>K</kbd></button>
+        <a class="btn btn-outline btn-sm" href="resume.pdf" id="resume-link" target="_blank">Resume</a>
+        <a class="btn btn-accent btn-sm" href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="hamburger" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="aurora">
+    <div class="aurora-blob b1"></div>
+    <div class="aurora-blob b2"></div>
+    <div class="aurora-blob b3"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span>Available for Internship 2026</div>
+        <h1 class="hero-title">Shivam Gupta</h1>
+        <div class="hero-role">Software Engineer & <span class="grad">Machine Learning Developer</span></div>
+        <p class="hero-desc">Building scalable applications, AI solutions, and data-driven products. I build software that solves real problems.</p>
+        <p class="hero-meta">Final Year B.Tech (ECE) · Minor in Data Science & Machine Learning</p>
+        <div class="hero-tags">
+          <span class="tag">Full Stack Development</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Data Analytics</span>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="resume.pdf" id="resume-link-2" target="_blank">Resume</a>
+          <a class="btn btn-outline" href="#projects">Projects</a>
+          <a class="btn btn-outline" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="photo-stage">
+        <div class="photo-ring">
+          <div class="photo-inner">
+            <img src="assets/images/profile.jpg" alt="Shivam Gupta" width="900" height="900" loading="eager">
+          </div>
+        </div>
+        <div class="float-chip chip-1">
+          <div class="fc-icon">🎓</div>
+          <div><div class="fc-num">7.59</div><div class="fc-label">CGPA / 10.00</div></div>
+        </div>
+        <div class="float-chip chip-2">
+          <div class="fc-icon">🚀</div>
+          <div><div class="fc-num">3+</div><div class="fc-label">Shipped Projects</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num" data-count-to="7.59" data-decimals="2">0</div><div class="stat-label">CGPA / 10.00</div></div>
+      <div class="stat-item"><div class="stat-num" data-count-to="3" data-suffix="+">0</div><div class="stat-label">Full-Stack Projects</div></div>
+      <div class="stat-item"><div class="stat-num" data-count-to="14" data-suffix="+">0</div><div class="stat-label">Certifications</div></div>
+      <div class="stat-item"><div class="stat-num">2027</div><div class="stat-label">Graduation Year</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-tag">About</div>
+        <div class="section-title mt-3">A quick introduction</div>
+        <div class="about-body">
+          <p>I'm a final-year <b>Electronics & Communication Engineering</b> student at MMMUT, Gorakhpur, specializing in a <b>minor in Data Science & Machine Learning</b>. My focus is full-stack software engineering — building products end to end, from frontend interfaces to backend APIs to the ML models that power them.</p>
+          <p>I've built and deployed production systems using <b>Next.js, FastAPI, and Supabase</b>, and shipped ML pipelines for forecasting and time-series prediction using <b>Scikit-learn, TensorFlow, and XGBoost</b>, tracked with MLflow and deployed on Docker and AWS.</p>
+          <p>Alongside coursework, I run an independent research and content project analyzing systematic, rule-based trading strategies — applying the same data-driven, backtested rigor I bring to my engineering work.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="edu-card">
+          <div class="edu-top"><span class="edu-school">Madan Mohan Malaviya University of Technology</span><span class="edu-score">7.59 CGPA</span></div>
+          <div class="edu-degree">B.Tech, Electronics & Communication Engineering (Data Science & ML)</div>
+          <div class="edu-year">2023 — 2027</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-top"><span class="edu-school">Pt. D.D.U. Sanatan Dharm Vidyalaya, Kanpur</span><span class="edu-score">91.67%</span></div>
+          <div class="edu-degree">CBSE, Class XII</div>
+          <div class="edu-year">2022</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-top"><span class="edu-school">Pt. D.D.U. Sanatan Dharm Vidyalaya, Kanpur</span><span class="edu-score">94%</span></div>
+          <div class="edu-degree">CBSE, Class X</div>
+          <div class="edu-year">2020</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag">Experience</div>
+      <div class="section-title">Where I've worked</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2024 — Present</div>
+        <div class="tl-role">Founder & Content Creator</div>
+        <div class="tl-org"><a href="https://www.youtube.com/@Mastermindtraderindia" target="_blank">Mastermind Algo Trader — YouTube</a></div>
+        <ul class="tl-desc">
+          <li>Founded and manage an algorithmic trading education channel; design and deploy rule-based strategies for automated execution.</li>
+          <li>Applied backtesting and model evaluation on historical market data using Chartink and TradingView; produced educational content on systematic, data-driven trading.</li>
+        </ul>
+        <button class="tl-toggle" type="button" aria-expanded="false">Stack used <span class="tl-toggle-icon">▾</span></button>
+        <div class="tl-extra">
+          <div class="tl-extra-inner">
+            <div class="tl-tags">
+              <span class="tl-tag">Pine Script v5</span><span class="tl-tag">Chartink</span><span class="tl-tag">TradingView</span><span class="tl-tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item past reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-date">1 Month</div>
+        <div class="tl-role">Frontend Developer Intern</div>
+        <div class="tl-org">Flikt — Startup, Remote</div>
+        <ul class="tl-desc">
+          <li>Built responsive UI components using HTML, CSS, and React; contributed to layout design, frontend structuring, and component-based architecture.</li>
+        </ul>
+        <button class="tl-toggle" type="button" aria-expanded="false">Stack used <span class="tl-toggle-icon">▾</span></button>
+        <div class="tl-extra">
+          <div class="tl-extra-inner">
+            <div class="tl-tags">
+              <span class="tl-tag">HTML</span><span class="tl-tag">CSS</span><span class="tl-tag">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag">Projects</div>
+      <div class="section-title">Things I've built</div>
+      <p class="section-sub">Full-stack platforms and ML systems, from idea to production deployment.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-thumb thumb-1"><span class="proj-thumb-label">mastermind-algo-website.vercel.app</span></div>
+        <div class="proj-body">
+          <div class="proj-title">Mastermind Algo Trading Platform</div>
+          <div class="proj-desc">A subscription-based signals community platform with live signals, paid courses, and integrated payments.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Next.js</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Supabase</span><span class="proj-tag">Razorpay</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://mastermind-algo-website.vercel.app/" target="_blank">Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-thumb thumb-2"><span class="proj-thumb-label">Pine Script v5 · Python</span></div>
+        <div class="proj-body">
+          <div class="proj-title">ABCDE Algo Strategy Dashboard</div>
+          <div class="proj-desc">A price-action liquidity-sweep reversal strategy: a TradingView indicator paired with a full Python backtesting dashboard.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Pine Script v5</span><span class="proj-tag">Python</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Pandas</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/shivamjigkp/ALGO-PORTFOLIO" target="_blank">GitHub ↗</a>
+            <a class="proj-link" href="https://algo-portfolio-lilac.vercel.app/" target="_blank">Live Demo ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card wide reveal">
+        <div class="proj-thumb thumb-3"><span class="proj-thumb-label">Scikit-learn · TensorFlow · MLflow · Docker · AWS</span></div>
+        <div class="proj-body">
+          <div class="proj-title">Machine Learning & Financial Analytics</div>
+          <div class="proj-desc">End-to-end ML/DL pipelines for stock and time-series prediction — experiments tracked with MLflow, deployed via Flask/FastAPI on Docker and AWS.</div>
+          <div class="sub-grid">
+            <div class="sub-item">
+              <div class="sub-item-name">Electricity Demand Forecasting</div>
+              <div class="sub-item-desc">XGBoost model forecasting hourly demand on 5 years of weather/calendar data.</div>
+              <a href="https://github.com/shivamjigkp/ELECTRICITY-ML-MODEL" target="_blank">GitHub ↗</a> · <a href="https://electricity-demand-predictor.onrender.com/" target="_blank">Live ↗</a>
+            </div>
+            <div class="sub-item">
+              <div class="sub-item-name">Weather Intelligence App</div>
+              <div class="sub-item-desc">React + ML backend: temperature forecasting, rain prediction, anomaly detection.</div>
+              <a href="https://weather-app-react-mu-two.vercel.app/" target="_blank">Live ↗</a>
+            </div>
+            <div class="sub-item">
+              <div class="sub-item-name">CNN Filter Visualization</div>
+              <div class="sub-item-desc">Visualized internal convolutional filters of a CNN using TensorFlow.</div>
+              <a href="https://github.com/shivamjigkp/Visualizing-Filters-of-a-CNN-using-TensorFlow" target="_blank">GitHub ↗</a>
+            </div>
+            <div class="sub-item">
+              <div class="sub-item-name">Tesla Stock Prediction</div>
+              <div class="sub-item-desc">Time-series forecasting of Tesla stock price using Facebook Prophet.</div>
+              <a href="https://github.com/shivamjigkp/Tesla-Stock-Price-Prediction-using-Facebook-Prophet" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag">Skills</div>
+      <div class="section-title">Tools I work with</div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-indigo">⌨️</div><div class="skill-name">Languages</div></div>
+        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">C++</span><span class="skill-tag">C</span><span class="skill-tag">SQL</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-coral">🧩</div><div class="skill-name">Frameworks & Libraries</div></div>
+        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Flask</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-teal">☁️</div><div class="skill-name">Cloud & Databases</div></div>
+        <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Supabase</span><span class="skill-tag">Vercel</span><span class="skill-tag">Render</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-indigo">🛠️</div><div class="skill-name">Developer Tools</div></div>
+        <div class="skill-tags"><span class="skill-tag">Git & GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">MLflow</span><span class="skill-tag">Postman</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-coral">📊</div><div class="skill-name">Data & ML Concepts</div></div>
+        <div class="skill-tags"><span class="skill-tag">CNNs</span><span class="skill-tag">Time Series Forecasting</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Monte Carlo Simulation</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-head"><div class="skill-icon bg-teal">💬</div><div class="skill-name">Soft Skills</div></div>
+        <div class="skill-tags"><span class="skill-tag">Problem Solving</span><span class="skill-tag">Analytical Thinking</span><span class="skill-tag">Communication</span><span class="skill-tag">Leadership</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS + CERTIFICATIONS -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag">Achievements</div>
+      <div class="section-title">Recognition & credentials</div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card reveal">
+        <div class="ach-badge">🏆</div>
+        <div><div class="ach-text">Rank 3 — XM Global Trading Competition (Algorithmic Trading)</div><div class="ach-year">2026</div></div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-badge">✅</div>
+        <div><div class="ach-text">Cleared FundingPips Prop Firm Challenge (Phase 1 & 2) — Funded Account</div><div class="ach-year">2025</div></div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-badge">📈</div>
+        <div><div class="ach-text">Demonstrated consistent algorithmic trading performance with disciplined risk management</div><div class="ach-year">Ongoing</div></div>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-badge">🏑</div>
+        <div><div class="ach-text">Hockey — UP Zonal Cluster (Rank 3) · Chess — Winner, KSS · Volunteer, NSS</div><div class="ach-year">Sports & Service</div></div>
+      </div>
+    </div>
+
+    <div class="section-tag reveal mt-1">Certifications</div>
+    <div class="cert-grid reveal mt-2">
+      <div class="cert-item"><div class="cert-name">Algorithmic Toolbox (DSA)</div><div class="cert-issuer">UC San Diego · Coursera</div></div>
+      <div class="cert-item"><div class="cert-name">ML: Regression & Classification</div><div class="cert-issuer">Stanford Online</div></div>
+      <div class="cert-item"><div class="cert-name">SQL (Advanced)</div><div class="cert-issuer">HackerRank</div></div>
+      <div class="cert-item"><div class="cert-name">Risk Management Job Simulation</div><div class="cert-issuer">Goldman Sachs</div></div>
+      <div class="cert-item"><div class="cert-name">Quantitative Research Job Simulation</div><div class="cert-issuer">J.P. Morgan</div></div>
+      <div class="cert-item"><div class="cert-name">Global Markets Sales & Trading Sim.</div><div class="cert-issuer">Bank of America</div></div>
+      <div class="cert-item"><div class="cert-name">GenAI Powered Data Analytics Sim.</div><div class="cert-issuer">Tata Group</div></div>
+      <div class="cert-item"><div class="cert-name">Azure Data Fundamentals (DP-900)</div><div class="cert-issuer">Infosys Springboard</div></div>
+      <div class="cert-item"><div class="cert-name">NumPy, SciPy, Matplotlib & Pandas: ML</div><div class="cert-issuer">SARA Academy</div></div>
+      <div class="cert-item"><div class="cert-name">Finance Data Analysis & Analytics</div><div class="cert-issuer">Udemy</div></div>
+      <div class="cert-item"><div class="cert-name">Web Development: CSS, JS, React</div><div class="cert-issuer">Udemy</div></div>
+      <div class="cert-item"><div class="cert-name">C, C++, PHP Programming</div><div class="cert-issuer">Udemy</div></div>
+      <div class="cert-item"><div class="cert-name">Arduino</div><div class="cert-issuer">Infosys Springboard</div></div>
+      <div class="cert-item"><div class="cert-name">GitHub</div><div class="cert-issuer">MMMUT</div></div>
+      <div class="cert-item"><div class="cert-name">NISM Securities Markets</div><div class="cert-issuer">NISM</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta-section" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag">Contact</div>
+      <div class="section-title">Let's work together</div>
+      <p class="section-sub">I'm looking for internship opportunities for 2026 — in full-stack development, machine learning, or data engineering.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-form-card reveal">
+        <div class="contact-form-title">Send a message</div>
+        <div class="contact-form-sub">Fill this in and it lands directly with me — I usually reply within a day.</div>
+
+        <form id="contact-form" novalidate>
+          <!-- Honeypot — left blank by humans, filled in by bots -->
+          <div class="form-hp" aria-hidden="true">
+            <label for="contact-hp">Leave this field empty</label>
+            <input type="text" id="contact-hp" name="company" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row-split">
+            <div class="form-row" data-row="name">
+              <label class="form-label" for="contact-name">Name</label>
+              <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name">
+              <div class="form-error-msg"></div>
+            </div>
+            <div class="form-row" data-row="email">
+              <label class="form-label" for="contact-email">Email</label>
+              <input class="form-input" type="email" id="contact-email" name="email" placeholder="you@email.com" autocomplete="email">
+              <div class="form-error-msg"></div>
+            </div>
+          </div>
+
+          <div class="form-row" data-row="phone">
+            <label class="form-label" for="contact-phone">Phone <span class="optional">(optional)</span></label>
+            <input class="form-input" type="tel" id="contact-phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+            <div class="form-error-msg"></div>
+          </div>
+
+          <div class="form-row" data-row="message">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea class="form-textarea" id="contact-message" name="message" placeholder="What are you looking to build, or what role did you have in mind?"></textarea>
+            <div class="form-error-msg"></div>
+          </div>
+
+          <button class="btn btn-accent form-submit" type="submit">
+            <span class="form-submit-label">Send Message</span>
+          </button>
+          <div class="form-status" role="status"></div>
+        </form>
+      </div>
+
+      <div class="cta-card reveal">
+        <div class="cta-content">
+          <div class="cta-title">Quick contact</div>
+          <p class="cta-sub">Prefer email, call, or social? Reach me directly here.</p>
+          <div class="cta-btns">
+            <a class="btn btn-white" href="mailto:quantxcoder@gmail.com">Email Me</a>
+            <a class="btn btn-ghost-dark" href="tel:+918081513780">+91-8081513780</a>
+          </div>
+          <div class="cta-links">
+            <a href="https://github.com/shivamjigkp" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/shivam-gupta-05209a27b" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@Mastermindtraderindia" target="_blank">YouTube</a>
+            <a href="mailto:2023041167@mmmut.ac.in">University Mail</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" data-visible="false">↑</button>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-text">© <span id="current-year">2026</span> Shivam Gupta · MMMUT, Gorakhpur</div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script type="module" src="src/js/main.js"></script>
+</body>
+</html>

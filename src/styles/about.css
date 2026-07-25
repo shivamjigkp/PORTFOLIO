@@ -1,0 +1,24 @@
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px;}}
+
+.about-body p{font-size:16px;color:var(--text-body);line-height:1.75;margin-bottom:18px;}
+.about-body b{color:var(--text);font-weight:600;}
+
+.edu-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:20px 22px;margin-bottom:14px;transition:.2s;
+}
+.edu-card:hover{border-color:var(--border-strong);box-shadow:var(--shadow-sm);}
+.edu-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:6px;}
+.edu-school{font-weight:600;font-size:15px;}
+.edu-score{font-size:13px;font-weight:700;color:var(--teal);white-space:nowrap;}
+.edu-degree{font-size:13.5px;color:var(--text-2);}
+.edu-year{font-size:12.5px;color:var(--text-3);margin-top:6px;font-family:'JetBrains Mono',monospace;}
+
+@media(max-width:480px){
+  .edu-card{padding:16px 18px;}
+}

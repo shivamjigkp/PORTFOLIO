@@ -1,0 +1,28 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-size:14px;font-weight:600;padding:11px 20px;border-radius:10px;
+  transition:all .18s cubic-bezier(.16,1,.3,1);
+  white-space:nowrap;border:1px solid transparent;
+}
+
+.btn-primary{background:var(--text);color:var(--bg);}
+.btn-primary:hover{filter:brightness(1.15);transform:translateY(-1px);box-shadow:var(--shadow-md);}
+
+.btn-accent{background:var(--accent);color:#fff;}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(79,70,229,0.35);}
+
+.btn-outline{border:1px solid var(--border-strong);color:var(--text);background:var(--surface);}
+.btn-outline:hover{border-color:var(--text);background:var(--bg-soft);}
+
+.btn-sm{padding:8px 14px;font-size:13px;}
+
+/* Buttons used on the always-dark contact CTA card */
+.btn-white{background:#fff;color:#0B0B0D;}
+.btn-white:hover{background:#f2f2f2;transform:translateY(-1px);}
+
+.btn-ghost-dark{border:1px solid rgba(255,255,255,0.25);color:#fff;}
+.btn-ghost-dark:hover{background:rgba(255,255,255,0.08);}

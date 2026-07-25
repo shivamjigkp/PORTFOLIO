@@ -1,0 +1,20 @@
+/* ==========================================================================
+   ANIMATIONS — keyframes + scroll-reveal utility
+   ========================================================================== */
+
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@keyframes float1{0%,100%{transform:translate(0,0);}50%{transform:translate(40px,30px);}}
+@keyframes float2{0%,100%{transform:translate(0,0);}50%{transform:translate(-30px,40px);}}
+@keyframes float3{0%,100%{transform:translate(0,0);}50%{transform:translate(20px,-30px);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+
+@media(prefers-reduced-motion:reduce){
+  .aurora-blob,.eyebrow-dot,.float-chip{animation:none;}
+  .reveal{transition:none;opacity:1;transform:none;}
+}

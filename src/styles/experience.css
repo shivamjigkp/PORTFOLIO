@@ -1,0 +1,53 @@
+/* ==========================================================================
+   EXPERIENCE — vertical timeline
+   ========================================================================== */
+
+.timeline{position:relative;padding-left:32px;}
+.timeline::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--border-strong);}
+
+.tl-item{position:relative;padding-bottom:48px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{
+  position:absolute;left:-32px;top:4px;width:13px;height:13px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--accent);
+}
+.tl-item.past .tl-dot{border-color:var(--border-strong);}
+
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--text-3);margin-bottom:6px;}
+.tl-role{font-size:18px;font-weight:700;letter-spacing:-0.01em;}
+.tl-org{font-size:14.5px;color:var(--accent);font-weight:500;margin-bottom:12px;}
+.tl-org a{color:inherit;border-bottom:1px solid rgba(79,70,229,0.3);}
+
+.tl-desc{list-style:none;}
+.tl-desc li{font-size:15px;color:var(--text-body);line-height:1.7;padding-left:18px;position:relative;margin-bottom:8px;}
+.tl-desc li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--text-3);}
+
+/* ---- Interactive: current/in-view item pulses, items expand for stack tags ---- */
+.tl-dot{transition:box-shadow .3s ease, border-color .3s ease;}
+.tl-item.is-active .tl-dot{
+  box-shadow:0 0 0 5px var(--accent-soft);
+}
+
+.tl-toggle{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:10px;font-size:12.5px;font-weight:600;color:var(--accent);
+  background:none;border:none;cursor:pointer;padding:0;
+}
+.tl-toggle-icon{
+  display:inline-flex;transition:transform .25s cubic-bezier(.16,1,.3,1);
+  font-size:10px;
+}
+.tl-item.is-expanded .tl-toggle-icon{transform:rotate(180deg);}
+
+.tl-extra{
+  display:grid;grid-template-rows:0fr;opacity:0;
+  transition:grid-template-rows .3s cubic-bezier(.16,1,.3,1), opacity .25s ease;
+}
+.tl-item.is-expanded .tl-extra{grid-template-rows:1fr;opacity:1;}
+.tl-extra-inner{overflow:hidden;}
+.tl-tags{display:flex;flex-wrap:wrap;gap:8px;padding-top:12px;}
+.tl-tag{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text-2);
+  background:var(--bg-soft);border:1px solid var(--border);
+  padding:4px 9px;border-radius:7px;
+}

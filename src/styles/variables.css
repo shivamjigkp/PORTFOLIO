@@ -1,0 +1,79 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Light theme is the default ("premium daylight"). Dark theme is an
+   equivalent, equally-premium surface — same accents, same spacing,
+   same type scale. Only surface/text/shadow values change.
+   ========================================================================== */
+
+:root{
+  /* ---- Surfaces & text (light / default) ---- */
+  --bg:#FFFFFF;
+  --bg-soft:#F6F6F8;
+  --surface:#FFFFFF;
+  --border:#EAEAEC;
+  --border-strong:#DDDDE2;
+  --text:#0B0B0D;
+  --text-2:#6B6B74;
+  --text-3:#9A9AA2;
+  --text-body:#3A3A42;
+
+  /* ---- Brand accents (consistent across themes) ---- */
+  --accent:#4F46E5;
+  --accent-dark:#3D34C9;
+  --accent-soft:#EEF0FF;
+  --coral:#FF6B4A;
+  --teal:#14B8A6;
+
+  /* ---- Theme-sensitive surfaces used by specific components ---- */
+  --nav-bg: rgba(255,255,255,0.72);
+  --photo-bg: linear-gradient(160deg,#ffffff,#F2F2F7);
+  --img-placeholder:#eeeeee;
+
+  /* ---- Radii ---- */
+  --radius-lg:22px;
+  --radius-md:14px;
+  --radius-sm:9px;
+
+  /* ---- Layout ---- */
+  --max:1180px;
+
+  /* ---- Shadows (soft, for light surfaces) ---- */
+  --shadow-sm:0 1px 2px rgba(10,10,15,0.04), 0 1px 1px rgba(10,10,15,0.03);
+  --shadow-md:0 8px 30px rgba(10,10,15,0.07);
+  --shadow-lg:0 20px 60px rgba(10,10,15,0.12);
+
+  color-scheme: light;
+}
+
+/* ---------------------------------------------------------------------- */
+/* DARK THEME                                                              */
+/* Same premium aesthetic, inverted surfaces. Brand accents stay vivid    */
+/* so the identity reads identically in either mode.                      */
+/* ---------------------------------------------------------------------- */
+[data-theme="dark"]{
+  --bg:#0B0B0F;
+  --bg-soft:#15151C;
+  --surface:#16161D;
+  --border:#26262F;
+  --border-strong:#33333E;
+  --text:#F3F3F5;
+  --text-2:#A0A0AC;
+  --text-3:#75757F;
+  --text-body:#C7C7D1;
+
+  --accent:#7C74FF;
+  --accent-dark:#9B93FF;
+  --accent-soft:rgba(124,116,255,0.14);
+  --coral:#FF8567;
+  --teal:#2DD4BF;
+
+  --nav-bg: rgba(11,11,15,0.72);
+  --photo-bg: linear-gradient(160deg,#1C1C24,#101014);
+  --img-placeholder:#1C1C24;
+
+  --shadow-sm:0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md:0 8px 30px rgba(0,0,0,0.45);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.55);
+
+  color-scheme: dark;
+}
